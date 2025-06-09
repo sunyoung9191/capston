@@ -24,7 +24,6 @@ transform = transforms.Compose([
     transforms.Normalize(mean=[0.5]*3, std=[0.5]*3)  # RGB 기준
 ])
 
-# Triplet Dataset 정의 (Augmentation 없이 구성)
 class TripletDataset(Dataset):
     def __init__(self, image_dir, transform=None):
         self.image_dir = image_dir
@@ -38,10 +37,8 @@ class TripletDataset(Dataset):
         anchor_path = os.path.join(self.image_dir, self.image_files[idx])
         anchor_img = Image.open(anchor_path).convert("RGB")
 
-        # Positive = anchor 이미지 자체 (augmentation 생략)
         positive_img = anchor_img.copy()
 
-        # Negative = 다른 이미지
         neg_idx = idx
         while neg_idx == idx:
             neg_idx = random.randint(0, len(self.image_files) - 1)
@@ -55,7 +52,7 @@ class TripletDataset(Dataset):
 
         return anchor_img, positive_img, negative_img
 
-# CNN 임베딩 모델 정의
+# CNN 임베딩 모델
 class EmbeddingNet(nn.Module):
     def __init__(self, embedding_size=128):
         super().__init__()
@@ -72,26 +69,24 @@ class EmbeddingNet(nn.Module):
     def forward(self, x):
         return self.fc(self.cnn(x))
 
-# Triplet Loss 함수 정의
+# Triplet Loss 함수
 def triplet_loss(anchor, positive, negative, margin=1.0):
     d_ap = F.pairwise_distance(anchor, positive)
     d_an = F.pairwise_distance(anchor, negative)
     loss = F.relu(d_ap - d_an + margin)
     return loss.mean()
 
-# 학습 시작
 def train():
     model = EmbeddingNet(embedding_size=EMBEDDING_SIZE).to(device)
 
-    # ✅ 기존 학습된 모델 불러오기
     if os.path.exists("eye_embedding_model.pth"):
         model.load_state_dict(torch.load("eye_embedding_model.pth", map_location=device))
-        print("📦 기존 모델 로드 완료")
+        print("기존 모델 로드 완료")
 
     optimizer = torch.optim.Adam(model.parameters(), lr=0.001)
 
     dataset = TripletDataset(IMAGE_FOLDER, transform=transform)
-    print(f"🔍 전체 학습 이미지 수: {len(dataset)}")
+    print(f"전체 학습 이미지 수: {len(dataset)}")
 
     dataloader = DataLoader(dataset, batch_size=BATCH_SIZE, shuffle=True)
 
@@ -118,9 +113,8 @@ def train():
 
         print(f"[Epoch {epoch+1}/{EPOCHS}] Loss: {total_loss:.4f}")
 
-    # 모델 저장
     torch.save(model.state_dict(), "eye_embedding_model.pth")
-    print("✅ 모델 저장 완료: eye_embedding_model.pth")
+    print("모델 저장 완료: eye_embedding_model.pth")
 
 
 if __name__ == "__main__":
