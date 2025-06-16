@@ -44,9 +44,9 @@ class EyeClassifier(nn.Module):
         return features if return_features else logits
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-model_path      = "eye_classifier.pth"
-image_dir       = r"C:\Users\parks\PycharmProjects\capston\venv\cropped_eyes"
-test_image_path = r"C:\Users\parks\PycharmProjects\capston\venv\test_image2.jpg"
+model_path      = "eye_embedding_model.pth"
+image_dir       = r"C:\Users\parks\PycharmProjects\capston\model_similarity\cropped_eyes"
+test_image_path = r"C:\Users\parks\PycharmProjects\capston\model_similarity\test_image.jpg"
 top_k           = 5
 
 transform = transforms.Compose([
