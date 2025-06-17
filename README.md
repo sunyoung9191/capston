@@ -5,10 +5,10 @@
 그래서 '뷰티 인사이드'의 주요 기능은, 사용자 사진을 업로드해 AI 이미지 분석을 통하여 유사한 얼굴의 성형 후기를 추천합니다. 그 후기를 읽고 더 신중하고 만족스러운 의료 서비스 선택이 가능해집니다.
 
 ---
-preprocessing 폴더:  눈썹이나 다른 요소가 들어가면 학습이 어려워지기 때문에, 모델 정확도를 위해 사진을 전부 눈만 crop되고 224x224로 resizing & padding되도록 만듦. 
+* preprocessing 폴더:  눈썹이나 다른 요소가 들어가면 학습이 어려워지기 때문에, 모델 정확도를 위해 사진을 전부 눈만 crop되고 224x224로 resizing & padding되도록 만듦. 
 
-model_similarity 폴더: 쌍꺼풀(class 3: 겉쌍, 속쌍(짝눈), 무쌍)으로 분류되어 만들어진 모델
+* model_similarity 폴더: 쌍꺼풀(class 3: 겉쌍, 속쌍(짝눈), 무쌍)으로 분류되어 만들어진 모델
 
-model 폴더: randmark를 찍어서 눈 모양을 학습시키는 모델
-![randmark 예시]
+* model 폴더: randmark를 찍어서 눈 모양을 학습시키는 모델
 
+![randmark 예시](https://github.com/user-attachments/assets/60706028-e71b-43bc-9163-b163523d53de)
