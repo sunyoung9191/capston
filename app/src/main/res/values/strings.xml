@@ -1,0 +1,50 @@
+<resources>
+    <string name="app_name">Beautyinside</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+
+    <!--홈화면-->
+    <string name="nav_home">홈</string>
+    <string name="nav_favorite">찜 목록</string>
+    <string name="nav_doctor">의사/병원</string>
+    <string name="nav_mypage">마이페이지</string>
+
+    <!--마이페이지 -->
+    <string name="title_mypage">마이페이지</string>
+    <string name="profile">프로필</string>
+    <string name="nickname">닉네임</string>
+
+    <string name="menu_favorite">찜 목록</string>
+    <string name="menu_review">후기</string>
+    <string name="menu_activity">활동·저장 내용</string>
+    <string name="menu_reservation">내 예약</string>
+
+    <string name="section_inquiry">문의</string>
+    <string name="menu_cs">고객센터</string>
+    <string name="menu_inquiry">문의하기</string>
+
+    <string name="section_setting">설정</string>
+    <string name="menu_alert_comment">댓글 알림</string>
+    <string name="menu_alert_news">소식 알림</string>
+
+    <string name="section_account">계정</string>
+    <string name="menu_logout">로그아웃</string>
+    <string name="menu_withdraw">회원 탈퇴</string>
+
+    <!--로그인창-->
+    <string name="back">뒤로가기</string>
+    <string name="login_signup_title">로그인 및 회원가입</string>
+    <string name="kakao_login">카카오 로그인</string>
+    <string name="google_login">구글 로그인</string>
+
+
+
+
+
+
+
+
+
+
+</resources>

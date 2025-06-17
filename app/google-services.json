@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "943405046894",
+    "project_id": "beauty-inside-287a8",
+    "storage_bucket": "beauty-inside-287a8.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:943405046894:android:f51b53a9e65d9b2aed9a7f",
+        "android_client_info": {
+          "package_name": "com.example.beautyinside"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBIVKS3uoJhdBU1Jwd2Y00l_cZZTF7XLSc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

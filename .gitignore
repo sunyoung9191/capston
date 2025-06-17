@@ -1,0 +1,13 @@
+# 빌드 및 캐시 파일
+.gradle/
+build/
+.idea/
+*.iml
+local.properties
+
+# APK, keystore
+*.apk
+*.keystore
+
+# 시스템 파일
+.DS_Store

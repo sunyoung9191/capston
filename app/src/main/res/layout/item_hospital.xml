@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="12dp"
+    android:background="@android:color/white"
+    android:elevation="2dp">
+
+    <!-- 병원 대표 이미지 -->
+    <ImageView
+        android:id="@+id/hospital_image"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:scaleType="centerCrop"
+        android:background="@android:color/black"
+        android:contentDescription="@null" />
+
+    <!-- 병원 이름 -->
+    <TextView
+        android:id="@+id/hospital_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="병원 이름"
+        android:textColor="#222222"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <!-- 병원 멘트 -->
+    <TextView
+        android:id="@+id/hospital_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="병원 소개 멘트"
+        android:textSize="14sp"
+        android:textColor="#666666"
+        android:layout_marginTop="4dp" />
+</LinearLayout>

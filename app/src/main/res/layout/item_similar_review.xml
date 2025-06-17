@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="12dp"
+    android:background="#FFFFFF"
+    android:layout_marginBottom="8dp"
+    android:elevation="2dp">
+
+    <!-- Before 이미지 -->
+    <ImageView
+        android:id="@+id/image_before"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:scaleType="centerCrop"
+        android:layout_marginEnd="8dp"
+        android:background="#EEEEEE" />
+
+    <!-- After 이미지 -->
+    <ImageView
+        android:id="@+id/image_after"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:scaleType="centerCrop"
+        android:layout_marginEnd="8dp"
+        android:background="#EEEEEE" />
+
+    <!-- 텍스트 정보 영역 -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="227dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/text_clinic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="병원이름"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/text_doctor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="의사이름"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/text_procedure"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="시술명"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/text_similarity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="유사도: 0.0000"
+            android:textColor="#888888"
+            android:textSize="14sp" />
+
+
+        <Button
+            android:id="@+id/button_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:backgroundTint="#B388FF"
+            android:text="병원 상세페이지로
+            이동하기"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+</LinearLayout>
